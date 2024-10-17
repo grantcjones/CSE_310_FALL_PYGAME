@@ -1,2 +1,1 @@
-# ITM474_Project-Management_Fall2024
-This is a repository for artifacts for my course and configuration management for their versions.
+This is a repository for the temporarily-named "BetterThanJira" project.
