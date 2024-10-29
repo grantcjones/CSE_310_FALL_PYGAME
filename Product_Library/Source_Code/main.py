@@ -13,7 +13,7 @@ except pygame.error as e:
     sys.exit(1)
 
 BACKGROUND = (53, 81, 92)
-PLAYER = 'My_Pygame/art/player.png'
+PLAYER = 'Product_Library/Source_Code/art/player.png'
 
 is_jumping = False
 jump_height = 15  # Jump strength (adjust as needed)
