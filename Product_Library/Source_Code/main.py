@@ -27,18 +27,13 @@ player = Player(PLAYER)
 while True:
     pygame.event.pump()  # Keeps the window responsive
     
-    
-    
-
     keys = pygame.key.get_pressed()
     if keys[pygame.K_a] and player.rect.left > 0:
         player.rect.x -= 1
+
     if keys[pygame.K_d] and player.rect.right < 1000:
         player.rect.x += 1
 
-    if keys[pygame.K_w] and player.rect.top > 100:
-        player.rect.y -= 1
-        
     if keys[pygame.K_s] and player.rect.bottom < 980:
         player.rect.y += 1
 
@@ -65,12 +60,6 @@ while True:
     # Apply gravity when not jumping
     elif player.rect.bottom < 960:
         player.rect.y += gravity
-    # Boundaries
-    # if player.rect.top <= 0 or player.rect.bottom >= 999:
-    #     player.rect.y = 0
-    # if player.rect.left <= 0 or player.rect.right  >= 0:
-    #     player.rect.y = 0
-
     
     if keys[pygame.K_ESCAPE]:
         break
