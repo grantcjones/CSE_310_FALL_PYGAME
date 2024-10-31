@@ -1,1 +1,2 @@
-This is a repository for the temporarily-named "BetterThanJira" project.
+New file for the new Pygame project 
+
