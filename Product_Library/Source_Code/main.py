@@ -2,11 +2,8 @@ import pygame
 import sys
 import random
 from player import Player
-<<<<<<< HEAD
 from opponent import Flying_Enemy
-=======
 from tile import Tile
->>>>>>> development
 
 pygame.init()
 
@@ -18,13 +15,10 @@ except pygame.error as e:
 
 # Constants
 BACKGROUND = (53, 81, 92)
-<<<<<<< HEAD
 PLAYER = 'Product_Library/Source_Code/art/player.png'
 ENEMY = 'Product_Library/Source_Code/art/enemy.png'
-=======
 PLAYER_IMAGE = 'CSE_310_FALL_PYGAME/Product_Library/Source_Code/art/player.png'
 SCREEN_WIDTH, SCREEN_HEIGHT = 1000, 600
->>>>>>> development
 
 # Player movement settings
 move_speed = 4          # Speed for left/right movement
@@ -35,10 +29,8 @@ is_jumping = False       # Jumping state
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
-<<<<<<< HEAD
 player = Player(PLAYER)
 enemy = Flying_Enemy(ENEMY)
-=======
 # Define a more complex map layout
 platforms = pygame.sprite.Group()
 map_layout = [
@@ -50,7 +42,6 @@ map_layout = [
     (850, 150, 100, 20),   # Platform 5
     (200, 100, 150, 20),   # Platform 6
 ]
->>>>>>> development
 
 for x, y, width, height in map_layout:
     platforms.add(Tile(x, y, width, height))
@@ -105,17 +96,12 @@ while True:
 
     # Drawing
     screen.fill(BACKGROUND)
-<<<<<<< HEAD
     screen.blit(player.image, player.rect)  # Draw player on the screen
     screen.blit(enemy.image, enemy.rect)  # Draw player on the screen
-    pygame.display.flip()  # Update the display
-=======
-    screen.blit(player.image, player.rect)
     platforms.draw(screen)
     pygame.display.flip()
 
     # Frame rate control
     clock.tick(60)  # Limit to 60 frames per second
->>>>>>> development
 
 pygame.quit()
