@@ -3,6 +3,7 @@ import sys
 import random
 
 from player import Player
+from opponent import Flying_Enemy
 
 pygame.init()
 
@@ -14,6 +15,7 @@ except pygame.error as e:
 
 BACKGROUND = (53, 81, 92)
 PLAYER = 'Product_Library/Source_Code/art/player.png'
+ENEMY = 'Product_Library/Source_Code/art/enemy.png'
 
 is_jumping = False
 jump_height = 15  # Jump strength (adjust as needed)
@@ -23,6 +25,7 @@ velocity_y = 0    # Vertical speed
 screen = pygame.display.set_mode((1000, 1000))
 
 player = Player(PLAYER)
+enemy = Flying_Enemy(ENEMY)
 
 while True:
     pygame.event.pump()  # Keeps the window responsive
@@ -66,6 +69,7 @@ while True:
 
     screen.fill(BACKGROUND)
     screen.blit(player.image, player.rect)  # Draw player on the screen
+    screen.blit(enemy.image, enemy.rect)  # Draw player on the screen
     pygame.display.flip()  # Update the display
 
 pygame.quit()
