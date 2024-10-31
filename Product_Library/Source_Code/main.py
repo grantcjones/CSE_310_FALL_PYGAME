@@ -17,7 +17,6 @@ except pygame.error as e:
 BACKGROUND = (53, 81, 92)
 PLAYER = 'Product_Library/Source_Code/art/player.png'
 ENEMY = 'Product_Library/Source_Code/art/enemy.png'
-PLAYER_IMAGE = 'CSE_310_FALL_PYGAME/Product_Library/Source_Code/art/player.png'
 SCREEN_WIDTH, SCREEN_HEIGHT = 1000, 600
 
 # Player movement settings
@@ -28,9 +27,9 @@ velocity_y = 0          # Vertical velocity
 is_jumping = False       # Jumping state
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-
 player = Player(PLAYER)
 enemy = Flying_Enemy(ENEMY)
+
 # Define a more complex map layout
 platforms = pygame.sprite.Group()
 map_layout = [
@@ -47,7 +46,6 @@ for x, y, width, height in map_layout:
     platforms.add(Tile(x, y, width, height))
 
 # Load player and set starting position randomly on top of one of the platforms
-player = Player(PLAYER_IMAGE)
 random_platform = random.choice(map_layout)
 player.rect.midbottom = (random_platform[0] + random_platform[2] // 2, random_platform[1])
 
