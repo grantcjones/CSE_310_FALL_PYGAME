@@ -16,7 +16,7 @@ except pygame.error as e:
 # Constants
 BACKGROUND = (53, 81, 92)
 PLAYER = 'Product_Library/Source_Code/art/player.png'
-ENEMY = 'Product_Library/Source_Code/art/enemy.png'
+ENEMY = 'Product_Library/Source_Code/art/enemy_frame1.png'
 SCREEN_WIDTH, SCREEN_HEIGHT = 1000, 600
 
 # Player movement settings
